@@ -1,0 +1,12 @@
+@import '../../../../node_modules/bootstrap-scss/functions';
+@import '../../../../node_modules/bootstrap-scss/variables';
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 1000px,
+    xl: 1280px
+);
+
+@import '../../../../node_modules/bootstrap-scss/';

@@ -1,0 +1,29 @@
+.card {
+  background-color: white;
+  padding: 3rem;
+
+  .text-smaller-card {
+    font-size: 2rem;
+  }
+
+  &__person {
+    display: flex;
+    align-items: center;
+    &-img {
+
+    }
+
+    &-info {
+      margin-left: 1rem;
+      .name {
+        font-size: 2rem;
+      }
+
+      .profession {
+        font-size: 1.6rem;
+        color: $color-black-light;
+      }
+    }
+  }
+
+}

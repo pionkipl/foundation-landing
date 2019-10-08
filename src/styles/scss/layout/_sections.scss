@@ -1,0 +1,109 @@
+// Default
+.img-mobile {
+  max-width: 300px;
+  height: auto;
+  margin-top: 2rem;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}    
+
+.section-text {
+  font-size: 2rem;
+}
+
+.get-started {
+  @include button;
+  color: white;
+  background-color: $color-blue;
+}
+
+.learn-more {
+  @include button;
+  color: $color-blue;
+  background-color: white;
+}
+
+
+// Sections
+.container-content {
+  transition: all .3s ease-in;
+  z-index: 5;
+}
+
+.menu-navigation {
+  margin-left: 70%;
+  transform: scale(0.9);
+  margin-top: -3rem;
+  opacity: .5;
+  z-index: 4;
+}
+
+// Top section
+.top-section {
+  background-color: $color-orange;
+  padding-bottom: 2rem;
+  .heading-main-text {
+    font-size: $main-header-text;
+    font-weight: 700;
+    line-height: 0.9;
+  }
+
+  .img-reader {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+  }
+}
+
+// What section
+.what {
+  background-color: $color-grey;
+
+  &__logo-containers {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+
+    .img-logo-container {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      .img-logo-firms {
+        width: 70px;
+      }
+    }
+  }
+}
+
+// Feature section
+.features {
+  &__container {
+    border-bottom: 2px solid $color-grey;
+    padding-bottom: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+
+// Team section
+.team {
+  background-color: $color-orange-light;
+  padding-bottom: 2rem;
+}
+
+//Comiunicate section
+.comunicate {
+  .comunicate-link {
+    color: $color-blue;
+    font-size: 1.6rem;
+    text-decoration: underline;
+  }
+}
