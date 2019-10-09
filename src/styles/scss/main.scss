@@ -1,3 +1,6 @@
+@import '../../../node_modules/@glidejs/glide/src/assets/sass/glide.core.scss';
+@import '../../../node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss';
+
 @import './abstracts/grid-breakpoints';
 @import './abstracts/mixins';
 @import './abstracts/utilities';
@@ -7,6 +10,7 @@
 @import './base/typography';
 
 @import './components/card';
+@import './components/engage-card';
 
 @import './layout/header';
 @import './layout/sections';
