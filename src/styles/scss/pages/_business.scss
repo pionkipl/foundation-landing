@@ -1,0 +1,128 @@
+.justify-center {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.plan {
+  background-color: $color-pink;
+  .container-header-bg {
+    background: linear-gradient(rgba($color-black-light, 0.1), white);
+    padding: 3rem 1rem;
+
+    .header-section {
+      @include media-breakpoint-up (md) {
+        width: 550px;
+      }
+    }
+  }
+
+  &__container-card {
+    .business-card {
+      border: 1px solid rgba($color-black-light, 0.2);
+      border-radius: 10px;
+      padding: 1rem;
+      margin-top: 2rem;
+      height: 712px;
+
+      &:hover {
+        background-color: white;
+      }
+
+      &-top {
+        padding-bottom: 2rem;
+        .business-text {
+          font-size: 1.4rem;
+          line-height: 1;
+          margin-top: 1rem;
+        }
+
+        .business-price {
+          font-size: 1.6rem;
+        }
+
+        .try-free {
+          width: 100%;
+          border: 1px solid $color-blue;
+          font-size: 2rem;
+          padding: 1rem;
+          color: $color-blue;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $color-blue;
+            color: white;
+          }
+        }
+      }
+
+      &-bottom {
+        margin-top: 2rem;
+        border-top: 2px solid $color-grey;
+        .business-list {
+          list-style: none;
+          margin-top: 3rem;
+
+          li {
+            // display: flex;
+            font-size: 1.8rem;
+            display: flex;
+
+            &:before {
+              content: '';
+              position: relative;
+              top: 8px;
+              background: url('/assets/images/check.png') no-repeat;
+              min-width: 20px;
+              height: 20px;
+              margin-right: 1rem;
+
+            }
+          }
+        }
+      }
+
+      @include media-breakpoint-up (sm) {
+        width: 300px;
+      }
+    }
+
+    @include media-breakpoint-up (sm) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .support-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 3rem;
+
+    .support {
+      max-width: 400px;
+      
+      .plan-link {
+        font-size: 1.8rem;
+        text-decoration: underline;
+        color: $color-blue;
+      }
+    }
+  }  
+}
+
+.qa {
+  padding: 3rem 0;
+  .qa-container {
+    .questions {
+      margin-top: 4rem;
+      .qa-single {
+        margin-top: 2rem;
+        @include media-breakpoint-up (md) {
+          margin-top: 4rem;
+          min-height: 130px;
+        }
+      }
+    }
+  }
+}

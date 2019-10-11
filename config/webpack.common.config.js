@@ -49,6 +49,17 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Webpack 4 Starter',
       template: './src/index.html',
+      filename: 'index.html',
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false
+      }
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Webpack 4 Starter',
+      template: './src/business.html',
+      filename: 'business.html',
       inject: true,
       minify: {
         removeComments: true,
