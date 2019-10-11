@@ -3,12 +3,16 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> Foundation site </title>
+    <title>Foundation site</title>
 
     <meta name="viewport" content="width=device-width,initial- scale=1"> 
 </head>
 <body>
-  <header class="header">
+  <!-- Small helper -->
+  <!-- <div class="break">
+    test
+  </div> -->
+  <header class="header background-orange">
     <div class="logo-mob">
       <a href="#"><img src="./assets/images/logo-mob.png" alt="logo"></a>
       <p class="logo-header">Foundation</p>
@@ -16,10 +20,18 @@
     <div class="header__nav-mob">
       <div class="burger-btn"></div>
       <ul class="nav-mob">
+        <li><a class="nav-mob-link" href="#">Home</a></li>
+        <li><a class="nav-mob-link" href="pages/business.html">Business</a></li>
+        <li><a class="nav-mob-link" href="#">Contact us</a></li>
+        <li><a class="nav-mob-link" href="#">Get started</a></li>
+      </ul>
+    </div>
+    <div class="header__nav-des">
+      <ul class="nav-des">
         <li><a href="#">Home</a></li>
         <li><a href="#">Business</a></li>
         <li><a href="#">Contact us</a></li>
-        <li><a href="#">Get started</a></li>
+        <li class="get-started-menu"><a href="#">Get started</a></li>
       </ul>
     </div>
   </header>
@@ -28,15 +40,15 @@
     <section class="top-section">
       <div class="container">
         <div class="row">
-          <div class="col-sm">
+          <div class="col-md">
             <h1 class="heading-main-text mg-top-5rem">Build stunning websites & apps.</h1>
             <p class="text-bigger mg-top-3rem">Create live segments and target the right people for messages based on their behaviors.</p>
-            <div class="get-started-buttonss">
-              <button class="get-started width-100">Get started</button>
-              <button class="learn-more width-100">Learn more</button>
+            <div class="get-started-buttons">
+              <button class="get-started">Get started</button>
+              <button class="learn-more">Learn more</button>
             </div>
           </div>
-          <div class="col-sm">
+          <div class="col-md img-reader-container">
             <img src="./assets/images/reader.png" alt="reader" class="img-reader">
           </div>
         </div>
@@ -56,7 +68,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-xs col what__logo-containers">
+          <div class="col-xs col-lg-6 what__logo-containers">
             <div class="img-logo-container">
                 <img src="./assets/images/times.png" alt="times" class="img-logo-firms">
             </div>
@@ -68,7 +80,7 @@
             </div>
           </div>
 
-          <div class="col-xs what__logo-containers">
+          <div class="col-xs col-lg-6 what__logo-containers">
             <div class="img-logo-container">
               <img src="./assets/images/mashhable.png" alt="mashable" class="img-logo-firms">
             </div>
@@ -85,35 +97,41 @@
 
     <section class="features mg-top-3rem">
       <div class="container">
-        <div class="row">
-          <div class="col-md features__container">
+        <div class="row features__container">
+          <div class="col-md col-xl-6 align-container">
             <p class="section-text color-green bold">Features</p>
             <h2 class="header-section bold">Easily find leads and customers</h2>
             <p class="text-smaller mg-top-3rem">Send one-off and automated email,
-               push, and in-app messages to people. Create better stories.</p>
+                push, and in-app messages to people. Create better stories.</p>
+          </div>
+          <div class="col-md col-xl-6">
             <div class="img-container">
               <img src="./assets/images/bird.png" alt="bird" class="img-mobile">
             </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md features__container">
+        <div class="row features__container">
+          <div class="col-md col-xl-6 align-container order-engage">
             <p class="section-text color-green bold">Engage Users</p>
             <h2 class="header-section bold">Engage with your audience</h2>
             <p class="text-smaller mg-top-3rem">Send one-off and automated email,
                 push, and in-app messages to people. Create better stories.</p>
+          </div>
+          <div class="col-md col-xl-6">
             <div class="img-container">
               <img src="./assets/images/painting.png" alt="painting" class="img-mobile">
             </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md features__container">
+        <div class="row features__container">    
+          <div class="col-md col-lg-6 align-container">
             <p class="section-text color-green bold">Support</p>
             <h2 class="header-section bold">The best customer experiences</h2>
             <p class="text-smaller mg-top-3rem">A beautifully simple system for tracking, prioritizing, and solving customer support tickets.</p>
+          </div>
+          <div class="col-md col-lg-6">
             <div class="img-container">
               <img src="./assets/images/tv.png" alt="tv" class="img-mobile">
             </div>
@@ -161,7 +179,7 @@
             <h2 class="header-section bold">Built for busy small teams</h2>
             <p class="text-smaller mg-top-3rem">Three products that can be used independently
                or combined together for your company’s needs.</p>
-            <button class="get-started width-50">Get started</button>
+            <button class="get-started">Get started</button>
           </div>
           <div class="col-md-6">
             <div class="img-container">
@@ -207,32 +225,39 @@
         </div>
 
         <div class="row mg-top-3rem">
-          <div class="col">
-            <div class="container-engage">
-              <div class="engage-card">
-                <div class="img-container">
-                  <img src="./assets/images/robot.png" alt="robot">
-                </div>
-                <p class="section-text bold text-center mg-top-2rem">Developers</p>
+          <div class="col col-md-6 col-lg-3 container-engage">
+            <div class="engage-card">
+              <div class="img-container">
+                <img src="./assets/images/robot.png" alt="robot">
               </div>
-              <div class="engage-card">
-                <div class="img-container">
-                  <img src="./assets/images/tv-small.png" alt="tv-small">
-                </div>
-                <p class="section-text bold text-center mg-top-2rem">Entertainment</p>
+              <p class="section-text bold text-center mg-top-2rem">Developers</p>
+            </div>
+          </div>
+
+          <div class="col col-md-6 col-lg-3 container-engage">
+            <div class="engage-card">
+              <div class="img-container">
+                <img src="./assets/images/tv-small.png" alt="tv-small">
               </div>
-              <div class="engage-card">
-                <div class="img-container">
-                  <img src="./assets/images/athlete.png" alt="athlete">
-                </div>
-                <p class="section-text bold text-center mg-top-2rem">Athletes</p>
+              <p class="section-text bold text-center mg-top-2rem">Entertainment</p>
+            </div>
+          </div>
+
+          <div class="col col-md-6 col-lg-3 container-engage">
+            <div class="engage-card">
+              <div class="img-container">
+                <img src="./assets/images/athlete.png" alt="athlete">
               </div>
-              <div class="engage-card">
-                <div class="img-container">
-                  <img src="./assets/images/creator.png" alt="creator">
-                </div>
-                <p class="section-text bold text-center mg-top-2rem">Creators</p>
+              <p class="section-text bold text-center mg-top-2rem">Athletes</p>
+            </div>
+          </div>
+
+          <div class="col col-md-6 col-lg-3 container-engage">
+            <div class="engage-card">
+              <div class="img-container">
+                <img src="./assets/images/creator.png" alt="creator">
               </div>
+              <p class="section-text bold text-center mg-top-2rem">Creators</p>
             </div>
           </div>
         </div>
@@ -243,44 +268,46 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <div class="glide">
-              <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides">
-                  <li class="glide__slide">
-                    <div class="text-center-container">
-                      <p class="section-text bold color-blue">Trusted by the world’s most innovative businesses – big and small</p>
-                      <p class="text-smaller">“Comprehensive set of startup tools for all imaginable entrepreneurial 
-                        needs. Create landing pages, send emails, find freelancers. Perfect for sales, marketing, and support”</p>
-                      <p class="text-name bold">Viella Malkovich</p>
-                      <p class="text-profession">Creative Director at Johnson</p>
-                    </div>
-                  </li>
+            <div class="glide-container">
+              <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                  <ul class="glide__slides">
+                    <li class="glide__slide">
+                      <div class="text-center-container">
+                        <p class="section-text bold color-blue">Trusted by the world’s most innovative businesses – big and small</p>
+                        <p class="text-smaller">“Comprehensive set of startup tools for all imaginable entrepreneurial 
+                          needs. Create landing pages, send emails, find freelancers. Perfect for sales, marketing, and support”</p>
+                        <p class="text-name bold">Viella Malkovich</p>
+                        <p class="text-profession">Creative Director at Johnson</p>
+                      </div>
+                    </li>
 
-                  <li class="glide__slide">
-                    <div class="text-center-container">
-                      <p class="section-text bold color-blue">Trusted by the world’s most innovative businesses – big and small</p>
-                      <p class="text-smaller">“Comprehensive set of startup tools for all imaginable entrepreneurial 
-                        needs. Create landing pages, send emails, find freelancers. Perfect for sales, marketing, and support”</p>
-                      <p class="text-name bold">Noron Milos</p>
-                      <p class="text-profession">Programmer</p>
-                    </div>
-                  </li>
+                    <li class="glide__slide">
+                      <div class="text-center-container">
+                        <p class="section-text bold color-blue">Trusted by the world’s most innovative businesses – big and small</p>
+                        <p class="text-smaller">“Comprehensive set of startup tools for all imaginable entrepreneurial 
+                          needs. Create landing pages, send emails, find freelancers. Perfect for sales, marketing, and support”</p>
+                        <p class="text-name bold">Noron Milos</p>
+                        <p class="text-profession">Programmer</p>
+                      </div>
+                    </li>
 
-                  <li class="glide__slide">
-                    <div class="text-center-container">
-                      <p class="section-text bold color-blue">Trusted by the world’s most innovative businesses – big and small</p>
-                      <p class="text-smaller">“Comprehensive set of startup tools for all imaginable entrepreneurial 
-                        needs. Create landing pages, send emails, find freelancers. Perfect for sales, marketing, and support”</p>
-                      <p class="text-name bold">Ilona Martyniek</p>
-                      <p class="text-profession">Scientist</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="glide__bullets" data-glide-el="controls[nav]">
-                <button class="glide__bullet" data-glide-dir="=0"></button>
-                <button class="glide__bullet" data-glide-dir="=1"></button>
-                <button class="glide__bullet" data-glide-dir="=2"></button>
+                    <li class="glide__slide">
+                      <div class="text-center-container">
+                        <p class="section-text bold color-blue">Trusted by the world’s most innovative businesses – big and small</p>
+                        <p class="text-smaller">“Comprehensive set of startup tools for all imaginable entrepreneurial 
+                          needs. Create landing pages, send emails, find freelancers. Perfect for sales, marketing, and support”</p>
+                        <p class="text-name bold">Ilona Martyniek</p>
+                        <p class="text-profession">Scientist</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                  <button class="glide__bullet" data-glide-dir="=0"></button>
+                  <button class="glide__bullet" data-glide-dir="=1"></button>
+                  <button class="glide__bullet" data-glide-dir="=2"></button>
+                </div>
               </div>
             </div>
             <div class="img-baloon">
@@ -360,53 +387,62 @@
 
     <footer class="footer mg-top-5rem">
       <div class="container">
-        <div class="row">
-          <div class="col">
+        <div class="row footer-container">
+          <div class="col-12 col-md-6 logo-footer">
             <div class="logo-footer-container">
-              <div class="logo-footer">
-                <a href="#"><img src="./assets/images/logo-mob.png" alt="logo"></a>
+              <div class="logo-footer-text">
+                <div class="logo-footer-img">
+                  <a href="#"><img src="./assets/images/logo-mob.png" alt="logo"></a>
+                </div>
+
+                <div class="footer-text-container">
+                  <p class="header-footer bold">Foundation</p>
+                  <div class="text-small-footer">Startup landing template</div>
+                </div>
               </div>
-              <div class="text-footer">
-                <p class="header-footer bold">Foundation</p>
-                <div class="text-small-footer">Startup landing template</div>
-                <div class="text-big-footer">Foundation is a website template for startups and small teams.
-                   It helps to build a website in no time.</div>
+
+              <div class="text-big-footer">Foundation is a website template for startups and small teams.
+                  It helps to build a website in no time.  
               </div>
+
               <div class="playapp-footer">
                 <div class="play-logo">
-                  <img src="./assets/images/app.png" alt="app logo">
+                  <a href="#"><img src="./assets/images/app.png" alt="app logo"></a>
                 </div>
                 <div class="app-logo">
-                  <img src="./assets/images/play.png" alt="play logo">
+                  <a href="#"><img src="./assets/images/play.png" alt="play logo"></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col">
-            <div class="product-container">
-              <p class="bold section-text">Product</p>
-              <ul class="product-list">
-                <li class="product-li"><a href="#">Acquire Users</a></li>
-                <li class="product-li"><a href="#">Content Marketing</a></li>
-                <li class="product-li"><a href="#">Website Templates</a></li>
-                <li class="product-li"><a href="#">Customer Management</a></li>
-                <li class="product-li"><a href="#">Virtual Inbox</a></li>
-              </ul>
+          <div class="col-12 col-md-6">
+            <div class="footer-links-container">
+              <div class="product-container">
+                <p class="bold section-text">Product</p>
+                <ul class="product-list">
+                  <li class="product-li"><a href="#">Acquire Users</a></li>
+                  <li class="product-li"><a href="#">Content Marketing</a></li>
+                  <li class="product-li"><a href="#">Website Templates</a></li>
+                  <li class="product-li"><a href="#">Customer Management</a></li>
+                  <li class="product-li"><a href="#">Virtual Inbox</a></li>
+                </ul>
+              </div>
+  
+              <div class="product-container">
+                <p class="bold section-text">Company</p>
+                <ul class="product-list">
+                  <li class="product-li"><a href="#">About Foundation</a></li>
+                  <li class="product-li"><a href="#">Brand Guidelines</a></li>
+                  <li class="product-li"><a href="#">Press Kit</a></li>
+                  <li class="product-li"><a href="#">Customer Management</a></li>
+                  <li class="product-li"><a href="#">Support</a></li>
+                </ul>
+              </div>
             </div>
+          </div>
 
-            <div class="product-container">
-              <p class="bold section-text">Company</p>
-              <ul class="product-list">
-                <li class="product-li"><a href="#">About Foundation</a></li>
-                <li class="product-li"><a href="#">Brand Guidelines</a></li>
-                <li class="product-li"><a href="#">Press Kit</a></li>
-                <li class="product-li"><a href="#">Customer Management</a></li>
-                <li class="product-li"><a href="#">Support</a></li>
-              </ul>
-            </div>
-
-            <div class="terms-icons">
+          <div class="col terms-icons">
               <div class="terms">
                 <a class="link-grey terms-text" href="#">Terms</a>
                 <a class="link-grey terms-text" href="#">Privacy</a>
@@ -424,7 +460,6 @@
                 </a>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </footer>

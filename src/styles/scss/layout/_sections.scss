@@ -18,12 +18,18 @@
 .get-started {
   @include button;
   color: white;
+  width: 100%;
   background-color: $color-blue;
+
+  @include media-breakpoint-up (md) {
+    width: fit-content;
+  }
 }
 
 .learn-more {
   @include button;
   color: $color-blue;
+  width: 100%;
   background-color: white;
 }
 
@@ -53,26 +59,44 @@
 
 .menu-navigation {
   margin-left: 70%;
-  transform: scale(0.9);
   margin-top: -3rem;
   opacity: .5;
   z-index: 4;
+
+  @include media-breakpoint-up (sm) {
+    margin-left: 30%;
+  }
 }
 
 // Top section
 .top-section {
   background-color: $color-orange;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
   .heading-main-text {
     font-size: $main-header-text;
     font-weight: 700;
     line-height: 0.9;
   }
 
-  .img-reader {
-    width: 100%;
-    height: auto;
-    margin-top: 2rem;
+  .img-reader-container {
+    display: flex;
+    align-items: center;
+
+    .img-reader {
+      width: 100%;
+      height: auto;
+      margin-top: 2rem;
+    }
+  }
+
+  .get-started-buttons {
+    .get-started, .learn-more {
+      width: 100%;
+      @include media-breakpoint-up (lg) {
+        width: 150px;
+        margin-right: 2rem;
+      }
+    }
   }
 }
 
@@ -81,6 +105,10 @@
   background-color: $color-grey;
 
   &__logo-containers {
+    @include media-breakpoint-up (lg) {
+      margin: 2rem 0;
+    }
+
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -104,16 +132,29 @@
 // Feature section
 .features {
   &__container {
-    border-bottom: 2px solid $color-grey;
     padding-bottom: 3rem;
     margin-bottom: 2rem;
+
+    .order-engage {
+      @include media-breakpoint-up (lg) {
+        order: 1;
+      }
+    }
+
+    .align-container {
+      @include media-breakpoint-up (lg) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
   }
 }
 
 // Team section
 .team {
   background-color: $color-orange-light;
-  padding-bottom: 2rem;
+  padding: 2rem 0;
 }
 
 //Comiunicate section
@@ -134,6 +175,23 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
+
+    .engage-card {
+      width: 300px;
+
+      @include media-breakpoint-up (lg) {
+        max-width: 220px;
+      }
+
+      @include media-breakpoint-up (xl) {
+        max-width: 260px;
+      }
+    }
+
+    @include media-breakpoint-up (sm) {
+      align-items: center;
+    }
   }
 }
 
@@ -142,36 +200,45 @@
 .trusted {
   padding: 3rem 0;
 
-  .glide {
-    &__bullets {
-      bottom: 0rem;
-    }
-    &__bullet {
-      background-color: rgba($color-black-light, .4);
-      transition: none;
-      margin: 0 0.75em;
-
-      &:hover {
-        border: none;
+  .glide-container {
+    .glide {
+      &__bullets {
+        bottom: 0rem;
       }
-
-      &--active {
-        background-color: $color-blue;
-        border: none;
-        box-shadow: none;
+      &__bullet {
+        background-color: rgba($color-black-light, .4);
+        transition: none;
+        margin: 0 0.75em;
+  
+        &:hover {
+          border: none;
+        }
+  
+        &--active {
+          background-color: $color-blue;
+          border: none;
+          box-shadow: none;
+        }
       }
     }
-  }
-
-  .text-center-container {
-    .text-name {
-      font-size: 1.8rem;
-      margin-bottom: 0;
+  
+    .text-center-container {
+      .text-name {
+        font-size: 1.8rem;
+        margin-bottom: 0;
+      }
+  
+      .text-profession {
+        font-size: 1.2rem;
+        color: rgba($color-black-light, .4);
+      }
+  
+     
     }
 
-    .text-profession {
-      font-size: 1.2rem;
-      color: rgba($color-black-light, .4);
+    @include media-breakpoint-up (lg) {
+      width: 600px;
+      margin: 0 auto;
     }
   }
 
@@ -179,11 +246,16 @@
     display: flex;
     justify-content: center;
     margin-top: 3rem;
+
+    @include media-breakpoint-up (lg) {
+      justify-content: flex-end;
+    }
   }
 }
 
 // Hire section
 .hire {
+  padding: 2rem 0;
   .hire-btn-container {
     display: flex;
     justify-content: center;
@@ -198,6 +270,18 @@
       margin-bottom: 1.6rem;
       display: flex;
       justify-content: space-between;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-blue;
+        color: white;
+
+        .name-place {
+          .place {
+            color: white;
+          }
+        }
+      }
 
       .name-place {
         display: flex;
@@ -211,6 +295,8 @@
         .place {
           font-size: 1.4rem;
           color: rgba($color-black-light, 0.4);
+
+
         }
       }
       
@@ -220,6 +306,11 @@
         font-size: 2rem;
         font-weight: 300;
       }
+    }
+
+    @include media-breakpoint-up (lg) {
+      width: 600px;
+      margin: 2rem auto;
     }
   }
 }
@@ -235,10 +326,22 @@
 
   .trial-group {
     order: 1;
+
+    @include media-breakpoint-up (md) {
+      order: 0;
+    }
   }
   .email {
     display: flex;
     flex-direction: column;
+
+    .get-started {
+      width: 100%;
+
+      @include media-breakpoint-up (lg) {
+        width: 182px;
+      }
+    }
 
     .email-input {
       height: 47px;
@@ -252,6 +355,14 @@
         text-align: center;
         padding-right: 1rem;
       }
+
+      @include media-breakpoint-up (lg) {
+        margin-right: 1rem;
+      }
+    }
+
+    @include media-breakpoint-up (lg) {
+      flex-direction: row;
     }
   }
 
@@ -264,59 +375,130 @@
 
 .footer {
   padding: 2rem 0;
-  .logo-footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 3rem;
 
+  .footer-container {
     .logo-footer {
-
-    }
-
-    .text-footer {
-      .header-footer {
-        font-size: 2.8rem;
-        margin-bottom: 0;
-        text-align: center;
-      }
-
-      .text-small-footer {
-        font-size: 2.2rem;
-        color: rgba($color-black-light, 0.6);
-      }
-
-      .text-big-footer {
-        font-size: 2.2rem;
-        color: rgba($color-black-light, 0.6);
-        display: none;
-      }
-    }
-
-    .playapp-footer {
       display: flex;
-      margin-top: 2rem;
-
-      .play-logo {
-        margin-right: 1rem;
+      justify-content: center;
+  
+      .logo-footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3rem;
+    
+        .logo-footer-text {
+          .logo-footer-img {
+            display: flex;
+            justify-content: center;
+  
+            img {
+              @include media-breakpoint-up (md) {
+                width: 80px;
+              }
+            }
+  
+            @include media-breakpoint-up (md) {
+              align-items: center;
+            }
+          }
+  
+          .footer-text-container {
+            .header-footer {
+              font-size: 2.8rem;
+              margin-bottom: 0;
+              text-align: center;
+  
+              @include media-breakpoint-up (md) {
+                text-align: left;
+                font-size: 2.2rem;
+              }
+            }
+      
+            .text-small-footer {
+              font-size: 2.2rem;
+              color: rgba($color-black-light, 0.6);
+  
+              @include media-breakpoint-up (md) {
+                font-size: 2rem;
+              }
+            }   
+  
+            @include media-breakpoint-up (md) {
+              line-height: 1.2;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            }
+          }  
+  
+          @include media-breakpoint-up (md) {
+            display: flex;
+          }
+        }
+  
+        .text-big-footer {
+          font-size: 2.2rem;
+          color: rgba($color-black-light, 0.6);
+          display: none;
+  
+          @include media-breakpoint-up (md) {
+            display: flex;
+            margin-left: 1rem;
+          }
+        }
+  
+        .playapp-footer {
+          display: flex;
+          margin-top: 2rem;
+    
+          .play-logo {
+            margin-right: 1rem;
+          }
+  
+          @include media-breakpoint-up (md) {
+            justify-content: flex-start;
+            margin-left: 1rem;
+            width: 100%;
+          }
+        } 
+  
+        @include media-breakpoint-up (lg) {
+          align-items: normal;
+        }
       }
-
-      .app-logo {
-
+  
+      @include media-breakpoint-up (sm) {
+        justify-content: center;
       }
+  
+      @include media-breakpoint-up (xl) {
+        max-width: 500px;
+      }
+    }
+
+    @include media-breakpoint-up (xl) {
+      justify-content: space-between;
     }
   }
-
-  .product-container {
-    margin-bottom: 2rem;
-    .product-list {
-      .product-li {
-        a {
-          color: rgba($color-black-light, .6);
-          font-size: 2rem;
+ 
+  .footer-links-container {
+    .product-container {
+      margin-bottom: 2rem;
+      .product-list {
+        list-style: none;
+        .product-li {
+          a {
+            color: rgba($color-black-light, .6);
+            font-size: 2rem;
+          } 
         }
-        
       }
+    }
+
+    @include media-breakpoint-up (sm) {
+      display: flex;
+      justify-content: space-between;
     }
   }
 
@@ -337,7 +519,18 @@
       .icon-footer {
         margin-right: 2rem;
       }
+
+      @include media-breakpoint-up (sm) {
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+      }
     }
-    
+
+    @include media-breakpoint-up (sm) {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }

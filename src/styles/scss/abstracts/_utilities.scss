@@ -8,11 +8,16 @@
 .text-bigger {
   font-size: $text-bigger;
   line-height: 34px;
+
 }
 
 .text-smaller {
   font-size: $text-smaller;
   line-height: 24px;
+
+  @include media-breakpoint-up (lg) {
+    font-size: 2rem;
+  }
 }
 
 .header-section {
