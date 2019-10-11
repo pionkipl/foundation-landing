@@ -4,17 +4,18 @@
   text-align: center;
 }
 
+.container-header-bg {
+  background: linear-gradient(rgba($color-black-light, 0.1), white);
+  padding: 3rem 1rem;
+}
+
 
 .plan {
   background-color: $color-pink;
-  .container-header-bg {
-    background: linear-gradient(rgba($color-black-light, 0.1), white);
-    padding: 3rem 1rem;
 
-    .header-section {
-      @include media-breakpoint-up (md) {
-        width: 550px;
-      }
+  .header-section {
+    @include media-breakpoint-up (md) {
+      width: 550px;
     }
   }
 
@@ -32,6 +33,10 @@
 
       &-top {
         padding-bottom: 2rem;
+
+        .business-text-header {
+          margin-top: 2rem;
+        }
         .business-text {
           font-size: 1.4rem;
           line-height: 1;

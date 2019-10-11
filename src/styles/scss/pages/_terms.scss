@@ -1,0 +1,27 @@
+.terms {
+  .terms-content {
+    .margin-container {
+      @include media-breakpoint-up (xl) {
+        padding: 0 12rem;
+      }
+    }
+
+    .terms-container {
+      .terms-section {
+        .text-smaller {
+          margin-top: 2rem;
+        }
+      }
+
+      .terms-warning {
+        margin-top: 2rem;
+        border-left: 4px solid $color-orange-dark;
+        padding-left: 2rem;
+      }
+
+      @include media-breakpoint-up (xl) {
+        padding: 0 12rem;
+      }
+    }
+  }
+}

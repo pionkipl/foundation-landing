@@ -1,0 +1,39 @@
+.contact {
+  background-color: $color-pink;
+
+  .contact-container {
+    padding: 4rem;
+    .contact-form-container {
+      display: flex;
+      justify-content: center;
+      .contact-form {
+        width: 600px;
+        
+        .input-container {
+          display: flex;
+          flex-direction: column;
+          margin-top: 2rem;
+
+          label {
+            font-size: 1.6rem;
+            font-weight: 700;
+          }
+
+          input {
+            font-size: 1.6rem;
+            padding: 1rem;
+          }
+
+          textarea {
+            font-size: 1.6rem;
+            padding: 1rem;
+          }
+        }
+  
+        .get-started {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

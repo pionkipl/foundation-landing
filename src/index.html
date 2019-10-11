@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Foundation site</title>
-
-    <meta name="viewport" content="width=device-width,initial- scale=1"> 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Foundation site</title>
+  <meta name="viewport" content="width=device-width,initial- scale=1"> 
 </head>
 <body>
   <!-- Small helper -->
-  <!-- <div class="break">
+  <div class="break">
     test
-  </div> -->
+  </div>
   <header class="header background-orange">
-    <div class="logo-mob">
-      <a href="#"><img src="./assets/images/logo-mob.png" alt="logo"></a>
-      <p class="logo-header">Foundation</p>
+    <div class="logo-mob container">
+      <a href="#">
+        <img src="./assets/images/logo-mob.png" alt="logo">
+        <p class="logo-header">Foundation</p>
+      </a>
+      
     </div>
     <div class="header__nav-mob">
       <div class="burger-btn"></div>
       <ul class="nav-mob">
         <li><a class="nav-mob-link" href="#">Home</a></li>
-        <li><a class="nav-mob-link" href="business.html">Business</a></li>
-        <li><a class="nav-mob-link" href="#">Contact us</a></li>
+        <li><a class="nav-mob-link" href="./business.html">Business</a></li>
+        <li><a class="nav-mob-link" href="./contact.html">Contact us</a></li>
         <li><a class="nav-mob-link" href="#">Get started</a></li>
       </ul>
     </div>
     <div class="header__nav-des">
       <ul class="nav-des">
         <li><a href="#">Home</a></li>
-        <li><a href="#">Business</a></li>
-        <li><a href="#">Contact us</a></li>
+        <li><a href="./business.html">Business</a></li>
+        <li><a href="./contact.html">Contact us</a></li>
         <li class="get-started-menu"><a href="#">Get started</a></li>
       </ul>
     </div>
@@ -40,15 +42,15 @@
     <section class="top-section">
       <div class="container">
         <div class="row">
-          <div class="col-md">
+          <div class="col-lg-5">
             <h1 class="heading-main-text mg-top-5rem">Build stunning websites & apps.</h1>
             <p class="text-bigger mg-top-3rem">Create live segments and target the right people for messages based on their behaviors.</p>
             <div class="get-started-buttons">
-              <button class="get-started">Get started</button>
-              <button class="learn-more">Learn more</button>
+              <a href=""><button class="get-started">Get started</button></a>
+              <a href="#features"><button class="learn-more">Learn more</button></a>
             </div>
           </div>
-          <div class="col-md img-reader-container">
+          <div class="col-lg-7 img-reader-container">
             <img src="./assets/images/reader.png" alt="reader" class="img-reader">
           </div>
         </div>
@@ -95,7 +97,7 @@
       </div>
     </section>
 
-    <section class="features mg-top-3rem">
+    <section id="features" class="features mg-top-3rem">
       <div class="container">
         <div class="row features__container">
           <div class="col-md col-xl-6 align-container">
@@ -443,26 +445,25 @@
           </div>
 
           <div class="col terms-icons">
-              <div class="terms">
-                <a class="link-grey terms-text" href="#">Terms</a>
-                <a class="link-grey terms-text" href="#">Privacy</a>
-                <a class="link-grey terms-text" href="#">Licence</a>
-              </div>
-              <div class="icons">
-                <a class="link-grey terms-text" href="#">
-                  <img class="icon-footer" src="./assets/images/icon-twitter.png" alt="twitter">
-                </a>
-                <a class="link-grey terms-text" href="#">
-                  <img class="icon-footer" src="./assets/images/icon-fb.png" alt="facebook">
-                </a>
-                <a class="link-grey terms-text" href="#">
-                  <img class="icon-footer" src="./assets/images/icon-linkedin.png" alt="linkedin">
-                </a>
-              </div>
+            <div class="terms">
+              <a class="link-grey terms-text" href="./terms.html">Terms</a>
+              <a class="link-grey terms-text" href="./terms.html">Privacy</a>
+              <a class="link-grey terms-text" href="./terms.html">Licence</a>
             </div>
+            <div class="icons">
+              <a class="link-grey terms-text" href="#">
+                <img class="icon-footer" src="./assets/images/icon-twitter.png" alt="twitter">
+              </a>
+              <a class="link-grey terms-text" href="#">
+                <img class="icon-footer" src="./assets/images/icon-fb.png" alt="facebook">
+              </a>
+              <a class="link-grey terms-text" href="#">
+                <img class="icon-footer" src="./assets/images/icon-linkedin.png" alt="linkedin">
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
-
   </div>
 </html>

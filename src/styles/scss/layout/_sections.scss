@@ -92,7 +92,7 @@
   .get-started-buttons {
     .get-started, .learn-more {
       width: 100%;
-      @include media-breakpoint-up (lg) {
+      @include media-breakpoint-up (md) {
         width: 150px;
         margin-right: 2rem;
       }
