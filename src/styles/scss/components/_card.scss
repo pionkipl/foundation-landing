@@ -10,9 +10,6 @@
   &__person {
     display: flex;
     align-items: center;
-    &-img {
-
-    }
 
     &-info {
       margin-left: 1rem;
@@ -26,5 +23,4 @@
       }
     }
   }
-
 }

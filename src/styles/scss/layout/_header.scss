@@ -28,11 +28,6 @@
   }
 
   &__nav-mob {
-
-    @include media-breakpoint-up (lg) {
-      display: none;
-    }
-
     .burger-btn {
       border-top: 2px solid black;
       height: 25px;
@@ -95,6 +90,9 @@
           }
         }
       }
+    }
+    @include media-breakpoint-up (lg) {
+      display: none;
     }
   }
 
